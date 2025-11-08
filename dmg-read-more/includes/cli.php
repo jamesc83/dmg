@@ -27,7 +27,6 @@ class DMG_Read_More_Search
     public function __invoke($args, $assoc_args)
     {
         $per_page = !empty($assoc_args['per-page']) ? intval($assoc_args['per_page']) : 100;
-        $per_page = !empty($assoc_args['per-page']) ? intval($assoc_args['per_page']) : 100;
         $page = !empty($assoc_args['page']) ? intval($assoc_args['page']) : 1;
         $date_before = !empty($assoc_args['date-before']) ? $assoc_args['date-before'] : date('Y-m-d', strtotime('+1 days'));
         $date_after = !empty($assoc_args['date-after']) ? $assoc_args['date-after'] : date('Y-m-d', strtotime('-30 days'));
