@@ -6,9 +6,8 @@ A small WordPress plugin that provides a Gutenberg "Read More" block and a WP-CL
 
 - Adds a Gutenberg block `dmg-read-more/read-more` that lets editors search for and attach a post link using InspectorControls.
 - Provides two WP-CLI utilities to locate posts that include the block:
-  - `wp dmg-read-more-search` — fast direct DB search (uses `$wpdb` and a parameterized LIKE on `post_content`).
-  - `wp dmg-read-more-search-wpquery` — example implementation using `WP_Query` and the `s` parameter (returns IDs only).
-
+  - `wp dmg-read-more-search` - uses WP_Query with a commented out section for a wp prepare implementaion
+  
 ## Installation
 
 1. Copy the plugin folder into your site's `wp-content/plugins/` directory.
@@ -52,8 +51,9 @@ Notes:
 
 - We could alternatively add a json option
 - I condidered implenting CLI as a class but as it is just one command I left it as a command
-- Optionally - Implement a potrntially faster DB-backed search using `$wpdb->prepare()` for performance- I have added this commented out
+- Optionally - Implement a potentially faster DB-backed search using `$wpdb->prepare()` for performance- I have added this commented out
 - If adding more blocks to this plugin I would convert read-more.php to a classs and namespace it
+- Potentially inplented automated batches on CLI
 
 
 
