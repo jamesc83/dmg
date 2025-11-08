@@ -5,6 +5,7 @@ A small WordPress plugin that provides a Gutenberg "Read More" block and a WP-CL
 ## What it does
 
 - Adds a Gutenberg block `dmg-read-more/read-more` that lets editors search for and attach a post link using InspectorControls.
+- Adds the 'dmg-read-more' class to the containing paragraph tag of the link
 - Provides two WP-CLI utilities to locate posts that include the block:
 - `wp dmg-read-more-search` - uses WP_Query with a commented out section for a wp prepare implementaion
   
