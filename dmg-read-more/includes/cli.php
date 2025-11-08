@@ -72,7 +72,6 @@ class DMG_Read_More_Search
 
         if (empty($query->posts)) {
             WP_CLI::log('No posts found.');
-            WP_CLI::log('No posts found.');
             return;
         }
 
