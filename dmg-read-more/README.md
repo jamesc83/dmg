@@ -41,7 +41,7 @@ Usage examples:
 
 
 Flags:
-- `--per_page` (int) — items per page (default: 100)
+- `--per-page` (int) — items per page (default: 100)
 - `--page` (int) — page number (default: 1)
 - `--date-after` (date string) - start date (defaults to now -30 days)
 - `--date-before` (date string) - end date (defaults to now)
