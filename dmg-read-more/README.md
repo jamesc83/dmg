@@ -36,7 +36,7 @@ Usage examples:
 
 - Wider date range :
 
-  wp dmg-read-more-search --per_page=50 --page=1 --date-after='2000-01-01' --date-before='2030-01-01'
+  wp dmg-read-more-search --per-page=50 --page=1 --date-after='2000-01-01' --date-before='2030-01-01'
 
 
 
