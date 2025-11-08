@@ -48,12 +48,12 @@ Flags:
 
 Notes:
 
-## Notes 
+## Notes for potential improvements/extensions
 
 - We could alternatively add a json option
-- I condidered implenting CLI as a class but as it is just one command I left it as a command
+- Potential to add additonal format to CLI output
 - Optionally - Implement a potentially faster DB-backed search using `$wpdb->prepare()` for performance- I have added this commented out
-- If adding more blocks to this plugin I would convert read-more.php to a classs and namespace it
+- If adding more blocks to this plugin I would convert read-more.php to a class and namespace it
 - Potentially inplented automated batches on CLI
 
 
