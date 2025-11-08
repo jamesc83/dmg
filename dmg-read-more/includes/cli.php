@@ -27,9 +27,11 @@ class DMG_Read_More_Search
     public function __invoke($args, $assoc_args)
     {
         $per_page = !empty($assoc_args['per-page']) ? intval($assoc_args['per_page']) : 100;
+        $per_page = !empty($assoc_args['per-page']) ? intval($assoc_args['per_page']) : 100;
         $page = !empty($assoc_args['page']) ? intval($assoc_args['page']) : 1;
         $date_before = !empty($assoc_args['date-before']) ? $assoc_args['date-before'] : date('Y-m-d', strtotime('+1 days'));
         $date_after = !empty($assoc_args['date-after']) ? $assoc_args['date-after'] : date('Y-m-d', strtotime('-30 days'));
+
 
 
         //WP_Query implementation 
@@ -64,12 +66,13 @@ class DMG_Read_More_Search
             $query_args['date_query'] = array($date_query);
         }
         $query = new WP_Query($query_args);
-        
+
         //potentially improve performance by caching results for repeated queries
-        $key = 'news_query_' . md5( wp_json_encode( $query_args ) );
+        $key = 'dmg_read_more' . md5( wp_json_encode( $query_args ) );
         set_transient( $key, $query->posts, HOUR_IN_SECONDS );
 
         if (empty($query->posts)) {
+            WP_CLI::log('No posts found.');
             WP_CLI::log('No posts found.');
             return;
         }
