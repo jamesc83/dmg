@@ -196,7 +196,7 @@
                 // Editor preview: prefer using saved attributes (title/link), fallback to fetched post or loading
                 (function () {
                     var preview = null;
-                    var prefix = __('Read More', 'dmg-read-more');
+                    var prefix = __('Read More: ', 'dmg-read-more');
                     if (attributes.selectedPostTitle && attributes.selectedPostLink) {
                         preview = el('p', { className: 'dmg-read-more', 'data-post-id': attributes.selectedPostId || '' },
                             prefix + ' ',
@@ -225,7 +225,7 @@
          */
         save: function (props) {
             var attributes = props.attributes || {};
-            var prefix = __('Read More', 'dmg-read-more');
+            var prefix = __('Read More: ', 'dmg-read-more');
             return el(
                 'p',
                 { className: 'dmg-read-more', 'data-post-id': attributes.selectedPostId || '' },
