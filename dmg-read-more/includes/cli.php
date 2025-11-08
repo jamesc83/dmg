@@ -6,7 +6,7 @@
  * Minimal command to search posts, optionally filtered by a date range.
  *
  * Usage:
- *  wp dmg-read-more-search --date-before="2025-10-01" --date-after="2025-01-01" --per_page=10 --page=1 
+ *  wp dmg-read-more-search --date-before="2025-10-01" --date-after="2025-01-01" --per-page=10 --page=1 
  */
 
 if (!defined('WP_CLI') && WP_CLI) {
